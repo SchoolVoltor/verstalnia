@@ -1164,7 +1164,7 @@ async function showImages(imgs){
 }
 $('#pdf-btn').addEventListener('click',e=>makePdf(e.currentTarget));
 /* --- transfer to class site via link --- */
-const SITE_URL='https://phoenix-ua.github.io/potential-dollop/verstalnia.html';
+const SITE_URL='https://schoolvoltor.github.io/verstalnia/';
 function shrink(src){return loadImg(src).then(im=>{const k=Math.min(1,640/Math.max(im.width,im.height));const c=document.createElement('canvas');c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(im,0,0,c.width,c.height);return{src:c.toDataURL('image/jpeg',0.6),w:c.width,h:c.height}})}
 let linkT,linkBusy=0;
 async function buildLink(){
